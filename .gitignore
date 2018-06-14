@@ -2,6 +2,7 @@
 /build/
 .idea/workspace.xml
 IEDriverServer.exe
+debug.log
 
 # Ignore Gradle GUI config
 gradle-app.setting
