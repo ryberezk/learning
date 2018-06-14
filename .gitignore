@@ -1,6 +1,7 @@
 .gradle
 /build/
 .idea/workspace.xml
+IEDriverServer.exe
 
 # Ignore Gradle GUI config
 gradle-app.setting

@@ -11,10 +11,10 @@ public class Point {
 
     public Point() {
     }
-//    @Override
-//    public String toString() {
-//        return "x= "+x+" y= "+y;
-//    }
+    @Override
+    public String toString() {
+        return "x= "+x+" y= "+y;
+    }
 
     public double distanceto(Point p1) {
         return Math.sqrt(Math.pow((this.x - p1.x), 2) + Math.pow((this.y - p1.y), 2));
