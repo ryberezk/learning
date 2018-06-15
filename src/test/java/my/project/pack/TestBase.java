@@ -7,9 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
@@ -32,12 +30,12 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         openMainPage("http://shipovalov.net");
-        loginWithParams();
+        loginWithParams(new UserData());
     }
 
-    public void chooseProject(String project) {
-        Select selectCategory = new Select(driver.findElement(By.name(project)));
-        selectCategory.selectByVisibleText("Lala");
+    public void chooseProject(ProjectData project) {
+        Select selectCategory = new Select(driver.findElement(By.name(project.getProject())));
+        selectCategory.selectByVisibleText(project.getNameOfChoose());
     }
 
     public void openMainPage(final String mainPageForTest) {
@@ -77,9 +75,9 @@ public class TestBase {
         driver.findElement(By.linkText("Report Issue")).click();
     }
 
-    public void loginWithParams() {
-        driver.findElement(By.name("username")).sendKeys("student");
-        driver.findElement(By.name("password")).sendKeys("luxoft");
+    public void loginWithParams(UserData user) {
+        driver.findElement(By.name("username")).sendKeys(user.getUsername());
+        driver.findElement(By.name("password")).sendKeys(user.getPassword());
         driver.findElement(By.cssSelector("input.button")).click();
     }
 
