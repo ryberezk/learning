@@ -13,7 +13,6 @@ public class MyFistProgram {
 
         System.out.println("Расстояние от точки "+point4+" до точки " +point1 + " равно "+point1.distanceto(point4));
         System.out.println("Расстояние равно: " + distance(point3,point4));
-
     }
 
     public static double distance (Point p1, Point p2){
