@@ -6,16 +6,16 @@ public class TestCases extends TestBase {
 
     @Test
     public void createNewIssue() {
-        chooseProject(new ProjectData().withProjectBlockName("project_id").withNameOfChoose("Lala"));
-        openReportIssue();
-        inputData("Text for block");
+        app.getIssueHelper.chooseProject(new ProjectData().withProjectBlockName("project_id").withNameOfChoose("Lala"));
+        app.getIssueHelper.openReportIssue();
+        app.getIssueHelper.inputData("Text for block");
     }
 
     @Test
     public void createNewIssueWithEmptyDescription() {
-        chooseProject(new ProjectData("project_id", "Lala"));
-        openReportIssue();
-        inputData("");
-        checkErrorText ();
+        app.getIssueHelper.chooseProject(new ProjectData("project_id", "Lala"));
+        app.getIssueHelper.openReportIssue();
+        app.getIssueHelper.inputData("");
+        app.getIssueHelper.checkErrorText();
     }
 }

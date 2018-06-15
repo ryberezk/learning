@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 @Test
 public class TestPoint {
 
-
     @Test
     public void checkdistanceto (){
         Point p1 = new Point(2.0,3.0);
