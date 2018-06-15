@@ -12,7 +12,7 @@ public class ProjectData {
     public ProjectData() {
     }
 
-    public ProjectData withProject (String project){
+    public ProjectData withProjectBlockName (String project){
         this.project = project;
         return this;
     }

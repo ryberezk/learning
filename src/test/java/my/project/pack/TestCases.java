@@ -6,7 +6,7 @@ public class TestCases extends TestBase {
 
     @Test
     public void createNewIssue() {
-        chooseProject(new ProjectData().withProject("project_id").withNameOfChoose("Lala"));
+        chooseProject(new ProjectData().withProjectBlockName("project_id").withNameOfChoose("Lala"));
         openReportIssue();
         inputData("Text for block");
     }
