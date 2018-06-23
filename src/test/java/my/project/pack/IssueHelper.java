@@ -36,9 +36,6 @@ public class IssueHelper {
         driver.findElement(By.name("description")).sendKeys(inputTextData);
         driver.findElement(By.name("steps_to_reproduce")).sendKeys(inputTextData);
         driver.findElement(By.name("additional_info")).sendKeys(inputTextData);
-        if (!driver.findElement(By.xpath("//div[3]/form/table/tbody/tr[14]/td[2]/label[2]/input")).isSelected()) {
-            driver.findElement(By.xpath("//div[3]/form/table/tbody/tr[14]/td[2]/label[2]/input")).click();
-        }
         if (!driver.findElement(By.id("report_stay")).isSelected()) {
             driver.findElement(By.id("report_stay")).click();
         }
